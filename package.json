@@ -1,0 +1,20 @@
+{
+  "name": "express-robots.txt",
+  "version": "1.0.0",
+  "description": "Express middleware to handle different robots.txt responses on different domains",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "middelware",
+    "robots.txt"
+  ],
+  "author": { 
+    "name" : "Steffen Agger",
+    "email" : "steffen.agger@gmail.com",
+    "url" : "http://sua.io"
+  },
+  "license": "ISC"
+}
