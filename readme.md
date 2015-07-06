@@ -19,7 +19,7 @@ A minimum of an array of domain names must be supplied.
 Optional the response text for allowed domains and disallowed domains can be passed.
 
 ```
-robotsTxt(allowedDomains[, allowedText] [, disallowedText]);
+robotsTxt(allowedDomains[, allowedText][, disallowedText]);
 ```
 
 Simplest usage:

@@ -2,10 +2,10 @@ var defaultAllowedText = 'User-agent: *\nDisallow:\n';
 var defaultDisallowedText = 'User-agent: *\nDisallow: /\n';
 
 /**
- * Handles requests for '/robots.txt' according to the current domain
- * @param  {array} allowedDomains  Array of domains (strings) allowed for search engines
- * @param  {string} allowedText    Content of the robots.txt for allowed domains
- * @param  {string} disallowedText Content of the robots.txt for NON allowed domains
+ * Create express middleware that handles requests for '/robots.txt', according to the current domain
+ * @param  {array} allowedDomains - Array of domains (strings), where search engines are allowed to trawl
+ * @param  {string} [allowedText] - Content of the robots.txt for allowed domains
+ * @param  {string} [disallowedText] - Content of the robots.txt for NON allowed domains
  * @return {function} Express middleware
  */
 var constructor = function(allowedDomains, allowedText, disallowedText) {
@@ -19,12 +19,12 @@ var constructor = function(allowedDomains, allowedText, disallowedText) {
         allowedDomains[i] = allowedDomains[i].toLowerCase();
     }
 
-    // set allowedText to default if not set 
+    // set allowedText to default, if not set
     if (typeof allowedText !== 'string') {
         allowedText = defaultAllowedText;
     }
 
-    // set disallowedText to default if not set 
+    // set disallowedText to default, if not set
     if (typeof disallowedText !== 'string') {
         disallowedText = defaultDisallowedText;
     }
